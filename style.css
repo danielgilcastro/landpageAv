@@ -1,0 +1,129 @@
+:root {
+    --header-margin-top: 20px;
+    --medieval-gold: #bfa046;
+    --medieval-bg: rgba(30, 24, 18, 0.85);
+    --medieval-bg-light: rgba(40, 32, 24, 0.7);
+    --medieval-border: #bfa046;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    margin: 40px;
+    background-color: #18120b;
+    color: #e6d9c3;
+    margin-top: var(--header-margin-top);
+
+    background-image: url('./img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1, h2 {
+    color: var(--medieval-gold);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px #000;
+}
+
+section {
+    background: var(--medieval-bg);
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.427);
+    margin: 12px;
+    border: 2px solid var(--medieval-border);
+    backdrop-filter: blur(2px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    color: var(--medieval-gold);
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #7c6a3c;
+    background: var(--medieval-bg-light);
+    color: #f9f6f2;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--medieval-gold);
+    background: rgba(60, 48, 32, 0.85);
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px;
+    background-color: var(--medieval-gold);
+    color: #2d2212;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #e6c86b;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infoContainer section {
+    flex: 1 1 320px;
+    margin: 12px;
+}
+.projetosContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: rgba(30, 24, 18, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    border-bottom: 2px solid var(--medieval-gold);
+}
+
+.butonBox{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+}
+
+.butonBox button {
+    display: flex;
+    align-items: center;
+}
+.butonBox button img {
+    margin-left: 5px;
+}
