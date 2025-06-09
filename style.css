@@ -1,5 +1,5 @@
 :root {
-    --header-margin-top: 20px;
+    --header-margin-top: 0px;
     --medieval-gold: #bfa046;
     --medieval-bg: rgba(30, 24, 18, 0.85);
     --medieval-bg-light: rgba(40, 32, 24, 0.7);
@@ -20,7 +20,8 @@ body {
     background-attachment: fixed;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: var(--medieval-gold);
     font-family: 'Georgia', 'Times New Roman', serif;
     letter-spacing: 2px;
@@ -76,7 +77,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     font-family: 'Georgia', 'Times New Roman', serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: background 0.2s;
 }
 
@@ -94,7 +95,8 @@ button:hover {
     flex: 1 1 320px;
     margin: 12px;
 }
-.projetosContainer{
+
+.projetosContainer {
     display: flex;
     justify-content: space-around;
 }
@@ -110,11 +112,11 @@ header {
     padding: 24px;
     background-color: rgba(30, 24, 18, 0.95);
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     border-bottom: 2px solid var(--medieval-gold);
 }
 
-.butonBox{
+.butonBox {
     display: flex;
     flex-direction: row-reverse;
     gap: 12px;
@@ -124,6 +126,100 @@ header {
     display: flex;
     align-items: center;
 }
+
 .butonBox button img {
     margin-left: 5px;
+}
+
+.aaa {
+    position: fixed;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    background: rgba(30, 24, 18, 0.95);
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.427);
+    border: 2px solid var(--medieval-border);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.aaa:hover {
+    background: rgba(40, 32, 24, 0.95);
+}
+
+.aaa:hover~*:not(.aaa),
+.aaa:hover~*:not(.aaa) * {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.6s;
+}
+
+.aaa:hover {
+    z-index: 3000;
+    opacity: 0 !important;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 8px;
+        /* margin-top: calc(var(--header-margin-top) + 70px); */
+        font-size: 15px;
+        background-size: cover;
+    }
+
+    header {
+        padding: 10px 2px;
+        font-size: 1em;
+    }
+
+    section {
+        padding: 10px;
+        margin: 6px 0;
+    }
+
+    .infoContainer,
+    .projetosContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .infoContainer section,
+    .projetosContainer section {
+        margin: 6px 0;
+        flex: 1 1 100%;
+    }
+
+    .butonBox {
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-end;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    input,
+    textarea {
+        font-size: 0.95em;
+    }
+
+    button {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+
+    .aaa {
+        top:0;
+        right: -20px;
+        left: auto;
+        transform:scale(0.5);
+    }
 }
