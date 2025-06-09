@@ -162,6 +162,48 @@ header {
     opacity: 0 !important;
 }
 
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe066 60%, #bfa046 100%);
+    cursor: pointer;
+    margin: 40px;
+    box-shadow: 0 0 30px #bfa04688, 0 0 60px #ffe06644;
+    position: relative;
+    overflow: hidden;
+    animation: circle-glow 2s infinite alternate;
+
+    /* Brilho cintilante animado */
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.2) 100%);
+    transform: rotate(25deg);
+    pointer-events: none;
+    animation: shimmer 2.2s infinite linear;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+@keyframes circle-glow {
+    0% {
+        box-shadow: 0 0 30px #bfa04688, 0 0 60px #ffe06644;
+    }
+    100% {
+        box-shadow: 0 0 50px #ffe066cc, 0 0 90px #ffe06688;
+    }
+}
+
+
+
+
 @media (max-width: 600px) {
     body {
         margin: 8px;
